@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 // const API_BASE = "http://localhost:8000/api";
-const API_URL = "https://sevatrack-backend-2nfn.onrender.com";
+const API_BASE = "https://sevatrack-backend-2nfn.onrender.com";
 
 export default function App() {
   const [page, setPage] = useState('landing'); // landing, login, dashboard, details, fix, approved
