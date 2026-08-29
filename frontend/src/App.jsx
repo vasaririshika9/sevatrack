@@ -164,9 +164,9 @@ export default function App() {
         {page === 'landing' && (
           <div>
             <div className="banner-disclaimer">
-              ℹ️ <strong>Hackathon Prototype:</strong> SevaTrack is an independent educational application utilizing synthetic demonstration data. It does not access real government systems or personal identifiers.
-            </div>
-            
+              ℹ️ <strong>Live Service:</strong>SevaTrack is connected to the backend in real time. 
+  Application statuses update instantly, and corrections are reflected as soon as they’re submitted.
+</div>
             <div className="card" style={{ textAlign: 'center', padding: '40px 20px' }}>
               <h1 style={{ fontSize: '2rem', marginBottom: 12 }}>Government applications, explained simply.</h1>
               <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: 24 }}>
