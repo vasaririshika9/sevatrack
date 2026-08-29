@@ -1,3 +1,21 @@
+# import os
+# from fastapi import FastAPI, HTTPException, UploadFile, File
+# from fastapi.middleware.cors import CORSMiddleware
+# from pydantic import BaseModel
+# from typing import Optional
+# import openai
+
+# from database import init_db, get_all_applications, get_application_by_id, update_application_status
+
+# app = FastAPI(title="SevaTrack API")
+
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["*"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+#)
 import os
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
@@ -9,13 +27,18 @@ from database import init_db, get_all_applications, get_application_by_id, updat
 
 app = FastAPI(title="SevaTrack API")
 
+# Allow frontend requests
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5176",   # Vite dev server
+        "https://sevatrack-frontend.onrender.com",  # example deployed frontend
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 @app.on_event("startup")
 def startup_event():
